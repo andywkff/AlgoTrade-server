@@ -15,7 +15,6 @@ ref = db.reference('')
 
 
 def get_all_db_user() -> list:
-    # call another lambda function here, in order to remove firebase_admin dependency
     docs = ref.get()
     result_list = []
     for item in docs:
@@ -24,7 +23,6 @@ def get_all_db_user() -> list:
 
 
 def update_users_table(new_user_list: list):
-    # call another lambda function here, in order to remove firebase_admin dependency
     for user in new_user_list:
         user_ref = ref.child(user["user_id"])
         user_ref.set(user)

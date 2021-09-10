@@ -1,7 +1,6 @@
 import simplejson as json
 import singleton_module
 import boto3
-import copy
 
 
 User = {

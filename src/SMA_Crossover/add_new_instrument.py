@@ -43,16 +43,15 @@ Instrument = {
     "config_history": []
 }
 
-new_instrument = ["BA"]
+# list of instrument to be added
+new_instrument = [""]
 
 
-def main(dummy: bool = False):
-    if dummy:
-        set_dummy_data()
-    else:
-        return ""
+def main():
+    set_dummy_data()
 
 
+# create dummy object and save to cloud database
 def set_dummy_data():
     users = sma_temp.get_all_db_user()
     result_list = []
@@ -72,4 +71,4 @@ def set_dummy_data():
 
 
 if __name__ == '__main__':
-    main(dummy = True)
+    main()
